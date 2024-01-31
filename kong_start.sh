@@ -6,7 +6,7 @@ sudo docker run -d --restart always --name kong \
     -e "KONG_PROXY_ERROR_LOG=/dev/stderr" \
     -e "KONG_ADMIN_ERROR_LOG=/dev/stderr" \
     -e "KONG_ADMIN_LISTEN=0.0.0.0:8001, 0.0.0.0:8444 ssl" \
-    -e "KONG_DECLARATIVE_CONFIG=/usr/kconfig/invoice.yaml"\
+    -e "KONG_DECLARATIVE_CONFIG=/usr/kconfig/filename.yml"\
     --mount type=bind,source="/home/ubuntu/kong/,target=/usr/kconfig/" \
     -p 9080:8000 \
     -p 9443:8443 \
